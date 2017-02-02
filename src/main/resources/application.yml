@@ -1,0 +1,21 @@
+server:
+  use-forward-headers: true
+  port: 8888
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/sabarnath/config-server-repo.git
+
+---
+spring:
+  profiles: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/sabarnath/config-server-repo.git
+
+
